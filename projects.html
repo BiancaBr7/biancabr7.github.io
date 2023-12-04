@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang = en>
+
+<head>
+
+    <link href = "{% static 'css/project.css' %}" rel = 'stylesheet'>
+
+    <meta charset = "utf-8">
+
+    <meta name = "author" content = "Bianca Bai">
+
+    <meta name = "description" content = "Bianca Bai's Projects">
+
+    <title>Projects</title>
+
+    <link rel="icon" href="{%static '/images/icon.png'%}" type = "images">
+
+</head>
+
+<body>
+    
+    <header class = "header">
+        <a href = "{% url 'home' %}" class = "logo">
+            <img src="{%static '/images/icon.png'%}" alt="Icon Image of Me!" width="70" height="70">
+        </a>
+        <nav class = "navbar">
+            <a href = "{% url 'home' %}">Home</a>
+            <a href = "{% url 'about' %}">About</a>
+            <a href = "{% url 'projects' %}">Projects</a>
+            <a href = "{% url 'experience' %}">Experience</a>
+            <a href = "{% url 'hobbies' %}">Hobbie</a>
+            <a href = "{% url 'contact' %}">Contact</a>
+        </nav>
+    </header>
+
+    <div class = "title">
+        <h1>Projects</h1>
+    </div>
+
+    <div class = "school_container">
+        <h2>School Projects</h2>
+        <h3>G11 ICS3U:</h3>
+        <p>Choose Your Own Adventure (Counsel Based RPG Game)
+            <br>Menu Based Sorting Algorism
+            <br>Campsite Registration GUI (with python Tkinter)
+        </p>
+        <h3>G12 ICS4U:</h3>
+        <p>File I/O (Sorting and combining data)</p>
+    </div>
+
+    <div class = "small_container">
+        <h2>Small Projects</h2>
+        <h3>Games:</h3>
+        <p>Bulls and Cows
+            <br>Pygame ChromeDino
+            <br>Math 24 calculator
+        </p>
+        <h3>Tools:</h3>
+        <p>Random Generater with python Tkinter
+            <br>File I/O (Sorting and combining data)
+            <br>Invasive plant spread simulation
+        </p>
+    </div>
+
+    <div class = "adv_container">
+        <h2>Godot Adventure Game</h2>
+    </div>
+    
+    <div class = "djg_container">
+        <h2>Django Website</h2>
+    </div>
+</body>
+</html>

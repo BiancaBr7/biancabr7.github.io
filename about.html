@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang = en>
+
+<head>
+
+    <link href = "{% static 'css/about.css' %}" rel = 'stylesheet'>
+
+    <meta charset = "utf-8">
+
+    <meta name = "author" content = "Bianca Bai">
+
+    <meta name = "description" content = "This page is about me, Bianca Bai ">
+
+    <title>About</title>
+
+    <link rel="icon" href="{%static '/images/icon.png'%}" type = "images">
+
+</head>
+
+<body>
+
+    <header class = "header">
+        <a href = "{% url 'home' %}" class = "logo">
+            <img src="{%static '/images/icon.png'%}" alt="Icon Image of Me!" width="70" height="70">
+        </a>
+        <nav class = "navbar">
+            <a href = "{% url 'home' %}">Home</a>
+            <a href = "{% url 'about' %}">About</a>
+            <a href = "{% url 'projects' %}">Projects</a>
+            <a href = "{% url 'experience' %}">Experience</a>
+            <a href = "{% url 'hobbies' %}">Hobbie</a>
+            <a href = "{% url 'contact' %}">Contact</a>
+        </nav>
+    </header>
+
+    <div class = "container1">
+        
+        <h1>About Me</h1>
+
+        <p>Hi! My name is Bianca Bai. <br>(My legal name is Xiuqi Bai, but I prefered to be called as Bianca.)</p>
+
+        <p>I came to study in Canada in 2022. I am currently a Gr. 12 international student at Iroquois Ridge High School. Even though I'm a bit of a newbie to the American education system, I have enrolled in a variety of <a href="{% url 'experience' %}">activities</a>, during which I gained valuable experiences. </p>
+
+        <p>Growing up, I am that bright kid everyone said I was. I mean... it does make sense: I am a fast learner, always determined to do stuff well once I started... But I feel like my biggest strength is my caring and compassionate personality. I enjoy being a leader to make a difference! </p>
+
+        <p>STEM and problem solving is my jam! I've been fascinated by it since forever. In 8th grade, I started learning to program, and that's when I discovered my particular interest in Computer Science. I know the following programming language/tools:
+            <br>Python: since Feb.2020
+            <br>C++: since Jun.2021
+            <br>HTML: since Jun.2023
+            <br>Godot Game Engine: since Jun.2023   
+        <br>Here are some <a href="{% url 'projects' %}">projects</a> I've made.
+        <br>You may also want to check some of the contests I've participated in. 
+        </p>
+        
+        <p>I am also a very <em>artistic</em> type of person! I enjoy painting, playing music, designing and 3D modeling. Check some of my <a href="{% url 'hobbies' %}">work</a> here!</p>
+
+        <p>I'd love to get to know you!!! Please feel free to <a href="{% url 'contact' %}">contact</a> me!</p>
+    </div>
+
+</body>
+</html>

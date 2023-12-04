@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang = en>
+
+<head>
+
+    <link href = "{% static 'css/contact.css' %}" rel = 'stylesheet'>
+
+    <meta charset = "utf-8">
+
+    <meta name = "author" content = "Bianca Bai">
+
+    <meta name = "description" content = "Bianca Bai's Contact Info">
+
+    <title>Contact</title>
+
+    <link rel="icon" href="{%static '/images/icon.png'%}" type = "images">
+
+</head>
+
+<body>
+    <header class = "header">
+        <a href = "{% url 'home' %}" class = "logo">
+            <img src="{%static '/images/icon.png'%}" alt="Icon Image of Me!" width="70" height="70">
+        </a>
+        <nav class = "navbar">
+            <a href = "{% url 'home' %}">Home</a>
+            <a href = "{% url 'about' %}">About</a>
+            <a href = "{% url 'projects' %}">Projects</a>
+            <a href = "{% url 'experience' %}">Experience</a>
+            <a href = "{% url 'hobbies' %}">Hobbie</a>
+            <a href = "{% url 'contact' %}">Contact</a>
+        </nav>
+    </header>
+    <div class = "title">
+        <h1>Contact Me</h1>
+    </div>
+</body>
+</html>

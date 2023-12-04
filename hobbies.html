@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang = en>
+
+<head>
+
+    <link href = "{% static 'css/hobbies.css' %}" rel = 'stylesheet'>
+
+    <meta charset = "utf-8">
+
+    <meta name = "author" content = "Bianca Bai">
+
+    <meta name = "description" content = "Bianca Bai's Hobbies">
+
+    <title>Hobbies</title>
+
+    <link rel="icon" href="{%static '/images/icon.png'%}" type = "images">
+
+</head>
+
+<body>
+    <header class = "header">
+        <a href = "{% url 'home' %}" class = "logo">
+            <img src="{%static '/images/icon.png'%}" alt="Icon Image of Me!" width="70" height="70">
+        </a>
+        <nav class = "navbar">
+            <a href = "{% url 'home' %}">Home</a>
+            <a href = "{% url 'about' %}">About</a>
+            <a href = "{% url 'projects' %}">Projects</a>
+            <a href = "{% url 'experience' %}">Experience</a>
+            <a href = "{% url 'hobbies' %}">Hobbie</a>
+            <a href = "{% url 'contact' %}">Contact</a>
+        </nav>
+    </header>
+
+    <div class = title>
+        <h1>My Hobbies</h1>
+    </div>
+    
+    <div class = "piano">
+        <h2>Piano</h2>
+        <p>I have started to learn piano since 6 years old. It is my longest-running hobby. I guess I can be counted as a pro in this field.</p>    
+    </div>
+
+    <div class = "painting">
+        <h2>Painting</h2>
+        <p>I am not a pro... Nevertheless, I just enjoy drawing stuff.</p>
+        <h3>Chinese Traditional Painting</h3>
+        <h3>Bullet Journal</h3>
+    </div>
+
+    <div class = "modeling">
+        <h3>Modeling</h3>
+        <p>I started to learn 3D modeling during summer in 2022, and I really love that!</p>
+        <h3>Blender works</h3>
+        <h3>Air-dry Clay works</h3>   
+    </div>
+
+</body>
+</html>
