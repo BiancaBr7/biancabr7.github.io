@@ -53,3 +53,30 @@ body {
     margin-right: auto;
     padding: 0px;
 }
+
+footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+/* styles.css */
+
+.social-icons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 30px;
+    transition: opacity 0.3s ease, transform 0.3 ease;
+  }
+  
+  .social-icons a:hover img {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+  
