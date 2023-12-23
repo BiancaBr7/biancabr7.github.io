@@ -18,8 +18,8 @@ body {
     width: 100%; /* Set the width of your container */
     min-height: 100vh;
     padding-top: 80px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
     padding-bottom: 80px;
     color: bisque;
     line-height: 140%;
@@ -28,6 +28,10 @@ body {
     background-size: 100%;
     background-repeat: repeat-y;
     background-attachment: scroll;
+}
+
+.wish h1{
+    font-size: 20px;
 }
 
 .signature{
