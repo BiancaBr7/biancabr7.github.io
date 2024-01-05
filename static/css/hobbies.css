@@ -5,6 +5,7 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+
 body {
     min-height: 100vh;
     background-color:whitesmoke;
@@ -54,7 +55,34 @@ body {
     padding: 0px;
 }
 
+h1 {
+    margin-bottom: 30px;
+    font-weight: 1000;
+    font-size: 40px;
+  }
+
+h2{
+    font-size:30px;
+    margin-bottom:15px;
+    margin-top:5px;
+}
+
+h3{
+    font-size:22px;
+    margin-bottom:15px;
+    margin-top:20px;
+}
+
+p{
+    margin-top:10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+
 .piano{
+    border-radius: 10px;
+    background-color: #fff;
     margin-top:20px;
     padding: 20px;
     width : 70%;
@@ -64,6 +92,8 @@ body {
 }
 
 .painting{
+    border-radius: 10px;
+    background-color: #fff;
     margin-top:20px;
     padding: 20px;
     width : 70%;
@@ -72,6 +102,8 @@ body {
     text-align: left;
 }
 .modeling{
+    border-radius: 10px;
+    background-color: #fff;
     margin-top:20px;
     padding: 20px;
     width : 70%;
@@ -80,3 +112,43 @@ body {
     text-align: left;
 }
 
+.note p{
+    color:#737373;
+    font-size: 15px;
+}
+
+.site_footer p{
+    text-align: center;
+    padding-top:15px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+}
+
+.scroll-container {
+    background-color: whitesmoke;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    margin-top:20px;
+    margin-bottom:20px;
+    width:800px
+  }
+  
+.scroll-container img {
+    padding: 10px;
+    height:420px;
+  }
+
+.media{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    padding: auto;
+}
+.media img{
+    width : 75%;
+}
+.media video{
+    width : 75%;
+}

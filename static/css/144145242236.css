@@ -66,3 +66,11 @@ body {
 .snowflakes.snow-hidden .snowflake {
     display: none;
 }
+
+.site_footer p{
+    text-align: center;
+    padding-top:15px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+}

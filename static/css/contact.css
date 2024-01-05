@@ -80,3 +80,29 @@ footer {
     transform: scale(1.1);
   }
   
+  .site_footer p{
+    text-align: center;
+    padding-top:15px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-weight: 1000;
+    font-size: 40px;
+  }
+
+h2{
+    font-size:30px;
+}
+
+h3{
+    font-size:22px;
+}
+
+p{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
