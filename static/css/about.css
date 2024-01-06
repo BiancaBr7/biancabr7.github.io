@@ -21,7 +21,6 @@ body {
     z-index: 100;
 }
 
-
 .navbar a{
     position: relative;
     font-size: 18px;
@@ -46,30 +45,30 @@ body {
     width:100%;
 }
 
-.container1{
+.container{
     margin-top:40px;
     padding-left: 200px;
     padding-right: 200px;
 }
 
-p{
+.container p{
     margin-bottom: 20px;
     font-size: 20px;
 }
 
-h1 {
+.title{
+    margin-top:40px;
+    width : 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+}
+
+.title h1 {
     margin-bottom: 30px;
     font-weight: 1000;
     font-size: 40px;
   }
-
-.site_footer p{
-    text-align: center;
-    padding-top:15px;
-    font-size:15px;
-    line-height:24px;
-    color:#737373;
-}
 
 table {
     border-collapse: collapse;
@@ -92,4 +91,13 @@ tr:first-child th{
 
 tr:nth-child(even) {
     background-color:#dddddd;
+}
+
+.site_footer p{
+    text-align: center;
+    padding-top:15px;
+    padding-bottom: 15px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
 }

@@ -5,6 +5,7 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+
 body {
     min-height: 100vh;
     background-color:whitesmoke;
@@ -54,11 +55,19 @@ body {
     padding: 0px;
 }
 
-footer {
+.title h1 {
+    margin-bottom: 30px;
+    font-weight: 1000;
+    font-size: 40px;
+}
+
+.icon_container {
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 60vh;
+    width: 100%;
 }
 
 .social-icons {
@@ -75,34 +84,16 @@ footer {
     transition: opacity 0.3s ease, transform 0.3 ease;
   }
   
-  .social-icons a:hover img {
+.social-icons a:hover img {
     opacity: 0.6;
     transform: scale(1.1);
   }
   
-  .site_footer p{
+.site_footer p{
     text-align: center;
     padding-top:15px;
+    padding-bottom: 15px;
     font-size:15px;
     line-height:24px;
     color:#737373;
-}
-
-h1 {
-    margin-bottom: 30px;
-    font-weight: 1000;
-    font-size: 40px;
-  }
-
-h2{
-    font-size:30px;
-}
-
-h3{
-    font-size:22px;
-}
-
-p{
-    margin-bottom: 20px;
-    font-size: 20px;
 }
