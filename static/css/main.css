@@ -113,7 +113,7 @@ ul{
 }
 
 .scroll-container {
-    background-color: whitesmoke;
+    background-color: white;
     overflow: auto;
     white-space: nowrap;
     padding: 10px;

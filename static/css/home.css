@@ -76,3 +76,10 @@ body {
     line-height:24px;
     color:#737373;
 }
+
+.weather{
+    position: absolute;
+    top:90%;
+    left:5%;
+    color: white;
+}
