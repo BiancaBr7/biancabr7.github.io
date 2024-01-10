@@ -34,15 +34,28 @@
         </nav>
     </header>
 
-    <div class = "container">
-        <div class = "text">
+    <div class = "container" id = "container">
+        <div class = "overlay"></div>
+        <div class = 'effect' id = "effect"></div>
+        <div class = "text" id = "title">
             <h3>Hey, I'm</h3>
             <h1>Bianca Bai</h1>
+                <button class = "more-button" id = "more-button" onclick="window.location.href='about.html'"><span>Get to Know Me</span></button>
         </div>
         <div id="weatherInfo" class = "weather">
+            <div>
+                <button class="color-button" onclick="changeBackground(0)">🌱</button>
+                <button class="color-button" onclick="changeBackground(1)">🏖️</button>
+                <button class="color-button" onclick="changeBackground(2)">🍂</button>
+                <button class="color-button" onclick="changeBackground(3)">☃️</button>
+                <button class="color-button" onclick="changeBackground(4)">🐿️</button>
+                <button class="color-button" onclick="changeBackground(5)">🐈‍⬛</button>
+                <button class="color-button" onclick="changeBackground(6)">🎇</button>
+                <button class="color-button" onclick="changeBackground(7)">🐾</button>
+            </div>
         </div>
+        <script src="static/script/homepage.js"></script>
     </div>
-    <script src="static/script/script.js"></script>
     
 </body>
 
