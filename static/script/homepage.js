@@ -3,6 +3,9 @@ function changeBackground(number){
     const back = document.getElementById("effect");
     clearEffects(back);
     back.hidden = true;
+    const clickPanel = document.getElementById('click');
+    clearEffects(clickPanel)
+    clickPanel.hidden = true;
     const container = document.getElementById("container")
     const backgroundImages = ['spring','summer','autumn','winter','sqr','cat','firework','paw']
     const buttoncolors = ['olive','cadetblue','#523928','steelblue','coral','orange','tomato','#1d1b23']
@@ -119,7 +122,7 @@ function leaf(){
 }
 
 function cat() {
-    const back = document.getElementById("effect");
+    const back = document.getElementById("click");
     back.hidden = false;
     const clonedBack = back.cloneNode(true);
     back.parentNode.replaceChild(clonedBack, back);
@@ -146,7 +149,7 @@ function cat() {
 }
 
 function paw() {
-    const back = document.getElementById("effect");
+    const back = document.getElementById("click");
     back.hidden = false;
 
     const clonedBack = back.cloneNode(true);
@@ -170,7 +173,7 @@ function paw() {
 }
 
 function nut() {
-    const back = document.getElementById("effect");
+    const back = document.getElementById("click");
     back.hidden = false;
     const clonedBack = back.cloneNode(true);
     back.parentNode.replaceChild(clonedBack, back);
