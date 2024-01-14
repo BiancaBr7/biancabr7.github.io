@@ -1,5 +1,13 @@
 petal()
+var animationFrame;
+var isAnimationOn = false;
+canvas = document.getElementById("canvas");
+canvas.hidden = true;
+
 function changeBackground(number){
+    if (number != 6 && isAnimationOn) {
+        stopFireworks();
+    }
     const back = document.getElementById("effect");
     clearEffects(back);
     back.hidden = true;
@@ -33,6 +41,9 @@ function changeBackground(number){
     }
     else if (number == 5){
         cat()
+    }
+    else if (number == 6){
+        onLoad()
     }
     else if (number == 7){
         paw()
@@ -87,7 +98,6 @@ function petal(){
 }
 
 function bird(){
-    console.log("runned")
     const back = document.getElementById("effect");
     back.hidden = false;
     const div = document.createElement('div');
@@ -96,7 +106,6 @@ function bird(){
 }
 
 function leaf(){
-    console.log("runned")
     const back = document.getElementById("effect");
     back.hidden = false;
     const count = 60;
@@ -116,7 +125,6 @@ function leaf(){
         div.style.animationDuration = timeLeaf+'s';
         div.style.filter = 'blur('+blurLeaf+'px)';
         div.style.transform = 'rotate('+rotationLeaf+'deg)';
-        console.log('rotate('+rotationLeaf+'deg)');
         back.appendChild(div);
     }
 }
@@ -168,7 +176,6 @@ function paw() {
 
         div.style.left = x + 'px';
         div.style.top = y + 'px';
-        console.log("runned")
     }
 }
 
@@ -198,5 +205,137 @@ function nut() {
                 div.style.top = y + 'px';
             }, i * 200); 
         }
+    }
+}
+
+function startFireworks() {
+    console.log("runned");
+    isAnimationOn = true;
+    canvas = document.getElementById("canvas");
+    canvas.hidden = false;
+}
+
+function stopFireworks() {
+    isAnimationOn = false;
+    canvas = document.getElementById("canvas");
+    canvas.hidden = true;
+    cancelAnimationFrame(animationFrame);
+}
+window.addEventListener("resize", resizeCanvas, false);
+
+window.requestAnimationFrame =
+    function (callback) {
+        window.setTimeout(callback, 1000 / 60);
+    };
+
+var canvas, ctx, w, h, particles = [], probability = 0.04,
+    xPoint, yPoint;
+
+function onLoad() {
+    if (!isAnimationOn){
+        startFireworks();
+    }
+    canvas = document.getElementById("canvas");
+    ctx = canvas.getContext("2d");
+    resizeCanvas();
+
+    window.requestAnimationFrame(updateWorld);
+}
+
+function resizeCanvas() {
+    if (!!canvas) {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+    }
+}
+
+function updateWorld() {
+    if (isAnimationOn) {
+        update();
+        paint();
+        animationFrame = window.requestAnimationFrame(updateWorld);
+    }
+}
+
+function update() {
+    if (particles.length < 500 && Math.random() < probability) {
+        createFirework();
+    }
+    var alive = [];
+    for (var i = 0; i < particles.length; i++) {
+        if (particles[i].move()) {
+            alive.push(particles[i]);
+        }
+    }
+    particles = alive;
+}
+
+function paint() {
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.fillStyle = "rgba(0,0,0,0.2)";
+    ctx.fillRect(0, 0, w, h);
+    ctx.globalCompositeOperation = 'lighter';
+    for (var i = 0; i < particles.length; i++) {
+        particles[i].draw(ctx);
+    }
+}
+
+function createFirework() {
+    xPoint = Math.random() * (w - 200) + 100;
+    yPoint = Math.random() * (h - 200) + 100;
+    var nFire = Math.random() * 50 + 100;
+    var c = "rgb(" + (~~(Math.random() * 200 + 55)) + ","
+        + (~~(Math.random() * 200 + 55)) + "," + (~~(Math.random() * 200 + 55)) + ")";
+    for (var i = 0; i < nFire; i++) {
+        var particle = new Particle();
+        particle.color = c;
+        var vy = Math.sqrt(25 - particle.vx * particle.vx);
+        if (Math.abs(particle.vy) > vy) {
+            particle.vy = particle.vy > 0 ? vy : -vy;
+        }
+        particles.push(particle);
+    }
+}
+
+function Particle() {
+    this.w = this.h = Math.random() * 1 + 1;
+
+    this.x = xPoint - this.w / 2;
+    this.y = yPoint - this.h / 2;
+
+    this.vx = (Math.random() - 0.5) * 10;
+    this.vy = (Math.random() - 0.5) * 10;
+
+    this.alpha = Math.random() * .5 + .5;
+
+    this.color;
+}
+
+Particle.prototype = {
+    gravity: 0.08,
+    move: function () {
+        this.x += this.vx;
+        this.vy += this.gravity;
+        this.y += this.vy;
+        this.alpha -= 0.01;
+        if (this.x <= -this.w || this.x >= screen.width ||
+            this.y >= screen.height ||
+            this.alpha <= 0) {
+            return false;
+        }
+        return true;
+    },
+    draw: function (c) {
+        c.save();
+        c.beginPath();
+
+        c.translate(this.x + this.w / 2, this.y + this.h / 2);
+        c.arc(0, 0, this.w, 0, Math.PI * 2);
+        c.fillStyle = this.color;
+        c.globalAlpha = this.alpha;
+
+        c.closePath();
+        c.fill();
+        c.restore();
     }
 }
