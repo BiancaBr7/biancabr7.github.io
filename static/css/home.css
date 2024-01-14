@@ -56,7 +56,7 @@ body {
     position: relative;
     width: 100%; /* Set the width of your container */
     height: 100vh;
-    background-image: url('../images/backgrounds/spring.jpg');
+    background-image: url('../images/backgrounds/winter.jpg');
     background-size: cover;
     background-position: center;
   }
@@ -79,7 +79,7 @@ body {
     border:0px;
     transition: all 0.5s;
     cursor: pointer;
-    background-color:olive;
+    background-color:steelblue;
     color: #fff;
 }
   

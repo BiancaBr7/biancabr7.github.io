@@ -1,4 +1,4 @@
-petal()
+snow()
 var animationFrame;
 var isAnimationOn = false;
 canvas = document.getElementById("canvas");
