@@ -39,13 +39,23 @@
                 <h1>Contact Me</h1>
             </div>
             <form action="https://formspree.io/f/xbjnlagg" method="POST" class = "form">
+                <div class = "inputs">
                 <label>
-                    Your email:
-                    <input type="email" name="email">
+                    NAME <span style = "color:red;">*</span>
+                    <input type="name" name="name" placeholder="Your Name" required>
                 </label>
                 <label>
-                    Your message:
-                    <textarea name="message"></textarea>
+                    EMAIL <span style = "color:red;">*</span>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </label>
+                </div>
+                <label>
+                    MESSAGE <span style = "color:red;">*</span>
+                    <textarea name="message" placeholder = "Your Message" required></textarea>
+                </label>
+                <label>
+                    Rate My Site!
+                    <input type="number" min="0" max="5" step="1"  style = "width:100%;"></input>
                 </label>
                 <button type="submit">Send</button>
             </form>

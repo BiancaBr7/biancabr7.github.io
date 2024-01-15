@@ -66,7 +66,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 60vh;
     width: 100%;
 }
 
@@ -74,8 +73,6 @@ body {
     display: flex;
     flex-direction: row;
 }
-
-/* styles.css */
 
 .social-icons a {
     display: inline-block;
@@ -99,54 +96,83 @@ body {
 }
 
 form {
-    max-width: 860px; /* Adjust the max-width as needed */
-    margin: 20px auto; /* Center the form and add margin top/bottom */
-    padding: 20px; /* Add padding to the form */
+    max-width: 920px;
+    margin: 20px auto;
+    padding: 20px;
     text-align: left;
 }
 
 label {
     color: black;
     display: block;
-    margin-bottom: 10px;
-    margin-top:10px;
-    margin-bottom:10px;
     font-size: 18px;
     font-weight: 540;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inputs{
+    display: flex;
+    justify-content: space-between;
 }
 
 input {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 430px;
+    max-width: 100%;
+    background-color:#dddddd;
+    border-width: 0px;
     color: black;
-    width: 100%; /* Set a fixed width for the input fields (2/3 of the page) */
     padding: 8px;
-    box-sizing: border-box;
-    margin-bottom: 16px;
     font-size: 18px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    border-width: 1px;
-    margin-top: 14px;
+    box-sizing: border-box;
+    border-radius:3px;
 }
+
+input:focus{
+    background-color: #fff;
+    outline: none;
+}
+
 textarea{
-    margin-top: 14px;
+    margin-top: 10px;
     color: black;
+    width: 100%;
     max-width : 100%;
     min-width :100%;
     min-height: 200px;
     font-size: 18px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    border-width: 1px;
+    background-color:#dddddd;
     padding: 10px;
+    border-width: 0px;
+    border-radius:3px;
 }
+
+textarea:focus{
+    background-color: #fff;
+    outline: none;
+}
+
 button {
+    margin-top: 20px;
     background-color:#000;
     color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
+    padding: 9px 14px;
+    border-width: 0px;
+    border-radius: 3px;
     cursor: pointer;
-    font-size: 15px;
-    margin: 20px auto;
+    width:10%;
+    font-size: 16px;
+    transition: .2s all ease-in-out;
+    border-bottom: 2px solid transparent;
+    outline: none;
+}
 
+button:hover{
+    background: inherit;
+    color: #000;
+    border-bottom: 2px solid #000;
+    border-radius: 0px;
 }
