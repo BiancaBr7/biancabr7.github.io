@@ -97,3 +97,56 @@ body {
     line-height:24px;
     color:#737373;
 }
+
+form {
+    max-width: 860px; /* Adjust the max-width as needed */
+    margin: 20px auto; /* Center the form and add margin top/bottom */
+    padding: 20px; /* Add padding to the form */
+    text-align: left;
+}
+
+label {
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size: 18px;
+    font-weight: 540;
+}
+
+input {
+    color: black;
+    width: 100%; /* Set a fixed width for the input fields (2/3 of the page) */
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    font-size: 18px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-width: 1px;
+    margin-top: 14px;
+}
+textarea{
+    margin-top: 14px;
+    color: black;
+    max-width : 100%;
+    min-width :100%;
+    min-height: 200px;
+    font-size: 18px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-width: 1px;
+    padding: 10px;
+}
+button {
+    background-color:#000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 20px auto;
+
+}
