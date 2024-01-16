@@ -47,16 +47,22 @@
         </div>
         <div id="weatherInfo" class = "weather">
             <div>
-                <button class="color-button" onclick="changeBackground(0)">🌱</button>
-                <button class="color-button" onclick="changeBackground(1)">🏖️</button>
-                <button class="color-button" onclick="changeBackground(2)">🍂</button>
-                <button class="color-button" onclick="changeBackground(3)">☃️</button>
-                <button class="color-button" onclick="changeBackground(4)">🐿️</button>
-                <button class="color-button" onclick="changeBackground(5)">🐈‍⬛</button>
+                <button id="spring" onclick="changeBackground(0)">🌱</button>
+                <button id="summer" onclick="changeBackground(1)">🏖️</button>
+                <button id="autumn" onclick="changeBackground(2)">🍂</button>
+                <button id="winter" onclick="changeBackground(3)">☃️</button>
+                <button id="sqr" onclick="changeBackground(4)">🐿️</button>
+                <button id="cat" onclick="changeBackground(5)">🐈‍⬛</button>
                 <button id = "firework" class="color-button" onclick="changeBackground(6)">🎇</button>
-                <button class="color-button" onclick="changeBackground(7)">🐾</button>
+                <button id = "paw" class="color-button" onclick="changeBackground(7)">🐾</button>
+                <button id = "musicButton" onclick="toggleMusic()">🎵</button>
             </div>
         </div>
+
+        <div class = "music" id = "music">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5mz01kqyV5Q02HRq0ITNQr?utm_source=generator" width="40%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
         <script src="static/script/homepage.js"></script>
     </div>
     

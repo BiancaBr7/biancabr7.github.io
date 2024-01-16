@@ -339,3 +339,20 @@ Particle.prototype = {
         c.restore();
     }
 }
+
+var musicHidden = true;
+const musicContainer = document.getElementById("music")
+const musicButton = document.getElementById("musicButton")
+function toggleMusic(){
+    console.log("runned")
+    if (musicHidden){
+        musicHidden = false;
+        musicContainer.style.display = "block";
+        musicButton.textContent = "⏸️";
+    }
+    else{
+        musicHidden = true;
+        musicContainer.style.display = "none";
+        musicButton.textContent = "🎵";
+    }
+}

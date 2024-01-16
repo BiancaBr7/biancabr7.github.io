@@ -304,3 +304,13 @@ canvas {
     left: 0;
     overflow: hidden;
 }
+
+.music{
+    position: fixed;
+    width: 60%;
+    top:75%;
+    left:75%;
+    color: white;
+    overflow: hidden;
+    display: none;
+}
