@@ -307,10 +307,9 @@ canvas {
 
 .music{
     position: fixed;
-    width: 60%;
-    top:75%;
+    top:85%;
     left:75%;
     color: white;
     overflow: hidden;
-    display: none;
+    display: hidden;
 }
