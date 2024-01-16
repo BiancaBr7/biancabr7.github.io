@@ -122,6 +122,9 @@ body {
     top:90%;
     left:5%;
     color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .overlay{
@@ -309,7 +312,33 @@ canvas {
     position: fixed;
     top:85%;
     left:75%;
-    color: white;
     overflow: hidden;
-    display: hidden;
+    display: block;
+}
+
+.messageBox {
+    position: fixed;
+    top:80%;
+    left:5%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:whitesmoke;
+    color: #737373;
+    padding: 15px;
+    padding-right:20px;
+    border-radius: 2px;
+    font-size: 15px;
+    transition: opacity 1s ease-in-out;
+}
+
+.closeButton {
+    background-color: transparent;
+    color: #737373;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-size: 18px;
 }

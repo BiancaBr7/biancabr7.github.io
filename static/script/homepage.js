@@ -3,6 +3,7 @@ var animationFrame;
 var isAnimationOn = false;
 canvas = document.getElementById("canvas");
 canvas.hidden = true;
+var messageBoxClosed = false;
 
 function changeBackground(number){
     if (number != 6 && isAnimationOn) {
@@ -25,27 +26,34 @@ function changeBackground(number){
     container.style.backgroundImage = imageId;
 
     if (number == 0){
+        closeMessageBox()
         petal()
     }
     else if (number == 1){
+        closeMessageBox()
         bird()
     }
     else if (number == 2){
+        closeMessageBox()
         leaf()
     }
     else if (number == 3){
+        closeMessageBox()
         snow()
     }
     else if (number == 4){
+        displayMessage()
         nut()
     }
     else if (number == 5){
+        displayMessage()
         cat()
     }
     else if (number == 6){
         onLoad()
     }
     else if (number == 7){
+        displayMessage()
         paw()
     }
 }
@@ -142,6 +150,7 @@ function cat() {
     }
 
     function createSnoringZ(x, y) {
+        closeMessageBox()
         for (let i = 0; i < 5; i++) {
             setTimeout(function () {
                 const div = document.createElement('div');
@@ -170,6 +179,7 @@ function paw() {
     }
 
     function createSnoringZ(x, y) {
+        closeMessageBox()
         const div = document.createElement('div');
         div.classList.add('paw');
         clonedBack.appendChild(div);
@@ -192,6 +202,7 @@ function nut() {
     }
 
     function createSnoringZ(x, y) {
+        closeMessageBox()
         const l_of_emj = ["🥜","🌰","🍂","🍃","🥔","🌿","🍁"]
         for (let i = 0; i < 5; i++) {
             setTimeout(function () {
@@ -356,5 +367,36 @@ function toggleMusic(){
         musicContainer.style.display = "none";
         musicButton.textContent = "🎵";
         spotifyEmbedWindow.postMessage({command: 'pause'}, '*');
+    }
+}
+
+
+const messageBox = document.getElementById("messageBox")
+function closeMessageBox() {
+    if (messageBoxClosed){
+        return;
+    }
+    else{
+        messageBox.style.opacity = '0';
+        setTimeout(function () {
+            messageBox.style.display = 'none';
+        }, 1000);
+        messageBoxClosed = true;
+    }
+}
+
+function displayMessage(){
+    if (messageBoxClosed){
+        messageBox.style.display = 'block';
+        messageBox.style.opacity = '100';
+        messageBox.textContent = "Click On the Screen For Surprise!";
+        messageBox.style.top = "50%";
+        messageBoxClosed = false;
+    }
+    else{
+        messageBox.style.display = 'block';
+        messageBox.textContent = "Click On the Screen For Surprise!";
+        messageBox.style.top = "50%";
+        messageBoxClosed = false;
     }
 }
