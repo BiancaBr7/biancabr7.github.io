@@ -354,19 +354,16 @@ Particle.prototype = {
 var musicHidden = true;
 const musicContainer = document.getElementById("music")
 const musicButton = document.getElementById("musicButton")
-const spotifyEmbedWindow = document.querySelector('iframe[src*="spotify.com/embed"]').contentWindow;
 function toggleMusic(){
     if (musicHidden){
         musicHidden = false;
         musicContainer.style.display = "block";
         musicButton.textContent = "⏸️";
-        spotifyEmbedWindow.postMessage({command: 'resume'}, '*');
     }
     else{
         musicHidden = true;
         musicContainer.style.display = "none";
         musicButton.textContent = "🎵";
-        spotifyEmbedWindow.postMessage({command: 'pause'}, '*');
     }
 }
 
