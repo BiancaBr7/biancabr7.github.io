@@ -328,7 +328,7 @@ canvas {
     padding-right:20px;
     border-radius: 2px;
     font-size: 15px;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .closeButton {

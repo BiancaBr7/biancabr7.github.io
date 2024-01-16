@@ -50,6 +50,7 @@ function changeBackground(number){
         cat()
     }
     else if (number == 6){
+        closeMessageBox()
         onLoad()
     }
     else if (number == 7){
@@ -351,7 +352,7 @@ Particle.prototype = {
     }
 }
 
-var musicHidden = true;
+var musicHidden = false;
 const musicContainer = document.getElementById("music")
 const musicButton = document.getElementById("musicButton")
 function toggleMusic(){
