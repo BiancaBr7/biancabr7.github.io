@@ -26,36 +26,36 @@ function changeBackground(number){
     container.style.backgroundImage = imageId;
 
     if (number == 0){
-        closeMessageBox()
-        petal()
+        closeMessageBox();
+        petal();
     }
     else if (number == 1){
-        closeMessageBox()
-        bird()
+        closeMessageBox();
+        bird();
     }
     else if (number == 2){
-        closeMessageBox()
-        leaf()
+        closeMessageBox();
+        leaf();
     }
     else if (number == 3){
-        closeMessageBox()
-        snow()
+        closeMessageBox();
+        snow();
     }
     else if (number == 4){
-        displayMessage()
-        nut()
+        displayMessage();
+        nut();
     }
     else if (number == 5){
-        displayMessage()
-        cat()
+        displayMessage();
+        cat();
     }
     else if (number == 6){
-        closeMessageBox()
-        onLoad()
+        closeMessageBox();
+        onLoad();
     }
     else if (number == 7){
-        displayMessage()
-        paw()
+        displayMessage();
+        paw();
     }
 }
 
@@ -352,49 +352,71 @@ Particle.prototype = {
     }
 }
 
-var musicHidden = false;
+var musicHidden = true;
 const musicContainer = document.getElementById("music")
 const musicButton = document.getElementById("musicButton")
+const spotifyEmbedWindow = document.querySelector('iframe[src*="spotify.com/embed"]').contentWindow;
 function toggleMusic(){
     if (musicHidden){
         musicHidden = false;
         musicContainer.style.display = "block";
         musicButton.textContent = "⏸️";
+        spotifyEmbedWindow.postMessage({command: 'resume'}, '*');
     }
     else{
         musicHidden = true;
         musicContainer.style.display = "none";
         musicButton.textContent = "🎵";
+        spotifyEmbedWindow.postMessage({command: 'pause'}, '*');
     }
 }
 
 
 const messageBox = document.getElementById("messageBox")
+const messageContainer = document.getElementById("messageContainer")
+const messageGraphic = document.getElementById("messageGraphic")
 function closeMessageBox() {
     if (messageBoxClosed){
         return;
     }
     else{
-        messageBox.style.opacity = '0';
+        console.log("messageBoxClosed")
+        messageContainer.style.opacity = '0';
         setTimeout(function () {
-            messageBox.style.display = 'none';
+            messageContainer.style.display = 'none';
         }, 1000);
         messageBoxClosed = true;
     }
+    console.log(messageBoxClosed)
 }
 
 function displayMessage(){
+    console.log("display"+messageBoxClosed)
     if (messageBoxClosed){
-        messageBox.style.display = 'block';
-        messageBox.style.opacity = '100';
-        messageBox.textContent = "Click On the Screen For Surprise!";
-        messageBox.style.top = "50%";
+        messageContainer.style.display = 'block';
+        messageContainer.style.opacity = '100';
+        messageBox.textContent = "Click for Surprise!";
+        messageGraphic.style.backgroundImage = "url('static/images/MessageClick.png')";
+        messageGraphic.style.top = "0";
+        messageGraphic.style.backgroundSize = "cover";
+        messageGraphic.style.position = "relative";
+        messageContainer.style.bottom = "30%";
+        messageBox.style.paddingTop = "15px";
+        messageBox.style.marginTop = "10px";
+        messageContainer.style.pointerEvents = "none";
         messageBoxClosed = false;
     }
     else{
-        messageBox.style.display = 'block';
-        messageBox.textContent = "Click On the Screen For Surprise!";
-        messageBox.style.top = "50%";
-        messageBoxClosed = false;
+        console.log("opened");
+        messageBox.textContent = "Click for Surprise!";
+        messageGraphic.style.backgroundImage = "url('static/images/MessageClick.png')";
+        messageGraphic.style.top = "0";
+        messageGraphic.style.backgroundSize = "cover";
+        messageGraphic.style.position = "relative";
+        messageContainer.style.bottom = "30%";
+        messageBox.style.paddingTop = "15px";
+        messageBox.style.marginTop = "10px";
+        messageContainer.style.pointerEvents = "none";
     }
+    
 }

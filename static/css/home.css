@@ -69,9 +69,11 @@ body {
     color:white; /* Set the text color */
     font-size: 30px; /* Set the font size */
     text-align: center;
+    z-index: 100;
 }
 
 .more-button {
+    position: relative;
     margin-top:20px;
     border-radius: 12px;
     padding: 10px 24px;
@@ -125,6 +127,7 @@ body {
     align-items: center;
     justify-content: center;
     display: flex;
+    z-index: 100;
 }
 
 .overlay{
@@ -297,6 +300,7 @@ body {
     top: 0;
     left: 0;
     overflow: hidden;
+    z-index: 5;
 }
 
 canvas {
@@ -306,6 +310,7 @@ canvas {
     top: 0;
     left: 0;
     overflow: hidden;
+    z-index: 5;
 }
 
 .music{
@@ -314,31 +319,48 @@ canvas {
     left:75%;
     overflow: hidden;
     display: block;
+    z-index: 100;
+}
+
+.messageContainer{
+    position: fixed;
+    bottom:12%;
+    left:5%;
+    transition: opacity 1s ease-in-out;
+    z-index: 100;
 }
 
 .messageBox {
-    position: fixed;
-    top:80%;
-    left:5%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color:whitesmoke;
-    color: #737373;
+    background-color:lightslategrey;
+    color: #fff;
     padding: 15px;
     padding-right:20px;
+    padding-top: 25px;
     border-radius: 2px;
-    font-size: 15px;
-    transition: opacity 0.5s ease-in-out;
+    font-size: 17px;
 }
 
 .closeButton {
     background-color: transparent;
-    color: #737373;
+    color: #fff;
     border: none;
     padding: 0;
     cursor: pointer;
     position: absolute;
     top: 0px;
-    right: 5px;
-    font-size: 18px;
+    right: 10px;
+    font-size: 20px;
+}
+
+.messageGraphic {
+    background-image: url('../images/MessageBox.png');
+    width: 73px;
+    height: 100px; /* Adjust the height accordingly */
+    position: absolute;
+    background-size:cover;
+    top: -60px;
+    left: 30%; /* Adjust the left position to overlap with messageBox */
+    opacity: 1;
+    overflow: visible; /* Ensure content outside the container is visible */
+    /* Add any other necessary styles */
 }

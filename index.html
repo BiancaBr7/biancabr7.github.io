@@ -43,7 +43,7 @@
         <div class = "text" id = "title">
             <h3>Hey, I'm</h3>
             <h1>Bianca Bai</h1>
-                <button class = "more-button" id = "more-button" onclick="window.location.href='about'"><span>Get to Know Me</span></button>
+            <button class = "more-button" id = "more-button" onclick="window.location.href='about.html'"><span>Get to Know Me</span></button>
         </div>
         <div id="weatherInfo" class = "weather">
             <div>
@@ -55,19 +55,21 @@
                 <button id="cat" onclick="changeBackground(5)">🐈‍⬛</button>
                 <button id = "firework" class="color-button" onclick="changeBackground(6)">🎇</button>
                 <button id = "paw" class="color-button" onclick="changeBackground(7)">🐾</button>
-                <button id = "musicButton" onclick="toggleMusic()">⏸️</button>
+                <button id = "musicButton" onclick="toggleMusic()">🎵</button>
             </div>
         </div>
 
         <div class = "music" id = "music">
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5mz01kqyV5Q02HRq0ITNQr?utm_source=generator" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" loop="true"></iframe>
         </div>
-
-
-        <div class="messageBox" id="messageBox">
-            <button class="closeButton" onclick="closeMessageBox()">×</button>
-            <p>Try the buttons below!!</p>
+        <div class = "messageContainer" id = "messageContainer">
+            <div class = "messageGraphic" id = "messageGraphic"></div>
+            <div class="messageBox" id="messageBox">
+                <button class="closeButton" onclick="closeMessageBox()">×</button>
+                <p>Try the buttons below!!</p>
+            </div>
         </div>
+        
         
         <script src="static/script/homepage.js"></script>
     </div>    
