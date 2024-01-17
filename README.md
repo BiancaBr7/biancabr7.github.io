@@ -12,3 +12,6 @@ My extracurricular experiences
 Discover some of my hobbies!!
 ### 6. Contact
 My contact info.
+
+## Credits
+https://biancabr7.github.io/about
