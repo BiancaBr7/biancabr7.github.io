@@ -352,7 +352,7 @@ Particle.prototype = {
     }
 }
 
-var musicHidden = true;
+var musicHidden = false;
 const musicContainer = document.getElementById("music")
 const musicButton = document.getElementById("musicButton")
 const spotifyEmbedWindow = document.querySelector('iframe[src*="spotify.com/embed"]').contentWindow;
