@@ -119,7 +119,7 @@ ul{
     padding: 10px;
     margin-top:20px;
     margin-bottom:20px;
-    width:800px
+    width:98%;
   }
   
 .scroll-container img {
@@ -131,11 +131,6 @@ ul{
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: auto;
+    width : 75%;
     padding: auto;
-}
-.media img{
-    width : 75%;
-}
-.media video{
-    width : 75%;
 }

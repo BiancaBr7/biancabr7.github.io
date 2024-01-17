@@ -47,8 +47,9 @@ body {
 
 .container{
     margin-top:40px;
-    padding-left: 200px;
-    padding-right: 200px;
+    width:70%;
+    margin-left: auto;
+    margin-right:auto;
 }
 
 .container p{
