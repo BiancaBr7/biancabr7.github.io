@@ -239,18 +239,15 @@ button:hover{
 
     .icon_container {
         padding: 5%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         width: 30%;
-        margin:auto;
+        margin-left:auto;
+        margin-right:auto;
     }
 
     .social-icons {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin:auto;
     }
     
     .social-icons a {
@@ -266,6 +263,15 @@ button:hover{
 
     .form{
         max-width:90%;
+    }
+
+    .inputs {
+        flex-direction: column; /* Display inputs in separate lines for mobile */
+    }
+
+    .name-input,
+    .email-input {
+        width: 100%; /* Full width for each input in mobile view */
     }
 
 }
