@@ -25,6 +25,7 @@
         <a href = "/" class = "logo">
             <img src="static/images/icon.png" alt="Icon Image of Me!" width="70" height="70">
         </a>
+        <div class="menu-toggle" onclick="toggleNavbar()">☰</div>
         <nav class = "navbar">
             <a href = "/">Home</a>
             <a href = "about">About</a>
@@ -34,6 +35,7 @@
             <a href = "contact">Contact</a>
             <a href = "https://christmas-beta-orcin.vercel.app/">🎄</a>
         </nav>
+        <script src="static/script/navbar.js"></script>
     </header>
 
     <div class = "container" id = "container">
@@ -55,9 +57,9 @@
                 <button id="winter" onclick="changeBackground(3)">☃️</button>
                 <button id="sqr" onclick="changeBackground(4)">🐿️</button>
                 <button id="cat" onclick="changeBackground(5)">🐈‍⬛</button>
-                <button id = "firework" class="color-button" onclick="changeBackground(6)">🎇</button>
-                <button id = "paw" class="color-button" onclick="changeBackground(7)">🐾</button>
-                <button id = "musicButton" onclick="toggleMusic()">⏸️</button>
+                <button id = "firework" onclick="changeBackground(6)">🎇</button>
+                <button id = "paw" onclick="changeBackground(7)">🐾</button>
+                <button id = "musicButton" class="music-button" onclick="toggleMusic()">⏸️</button>
             </div>
         </div>
 

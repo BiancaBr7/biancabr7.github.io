@@ -139,3 +139,59 @@ ul{
 .media video{
     width : 75%;
 }
+
+@media only screen and (max-width: 600px) {
+    .box {
+        width : 85%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+    .scroll-container img {
+        padding: 1px;
+        height:210px;
+    }
+    .title{
+        width : 85%;
+        margin-top:0%;
+    }
+
+    .header{
+        top:0;
+        left: 0;
+        width: 100%;
+        padding: 10% 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+    
+    
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 120px;
+        right:8%;
+        border-radius: 3px;
+        background-color: rgba(0,0,0,0.7);
+        width: 45%;
+        height: 50vh;
+    }
+
+    .navbar.show {
+        display: flex;
+        position: fixed;
+    }
+
+    .navbar a {
+        margin: 20px;
+        color: #fff;
+    }
+
+    .menu-toggle{
+        font-size: 20px;
+    }
+
+}

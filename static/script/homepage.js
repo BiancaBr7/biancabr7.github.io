@@ -391,6 +391,7 @@ function closeMessageBox() {
 }
 
 function displayMessage(){
+    var screenWidth = window.innerWidth;
     console.log("display"+messageBoxClosed)
     if (messageBoxClosed){
         messageContainer.style.display = 'block';
@@ -400,7 +401,9 @@ function displayMessage(){
         messageGraphic.style.top = "0";
         messageGraphic.style.backgroundSize = "cover";
         messageGraphic.style.position = "relative";
-        messageContainer.style.bottom = "30%";
+        if (screenWidth >= 768){
+            messageContainer.style.bottom = "30%";
+        }
         messageBox.style.paddingTop = "15px";
         messageBox.style.marginTop = "10px";
         messageContainer.style.pointerEvents = "none";
@@ -413,7 +416,9 @@ function displayMessage(){
         messageGraphic.style.top = "0";
         messageGraphic.style.backgroundSize = "cover";
         messageGraphic.style.position = "relative";
-        messageContainer.style.bottom = "30%";
+        if (screenWidth >= 768){
+            messageContainer.style.bottom = "30%";
+        }
         messageBox.style.paddingTop = "15px";
         messageBox.style.marginTop = "10px";
         messageContainer.style.pointerEvents = "none";
