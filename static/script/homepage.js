@@ -117,12 +117,12 @@ function bird(){
 function leaf(){
     const back = document.getElementById("effect");
     back.hidden = false;
-    const count = 60;
+    const count = 40;
     for (var i = 0; i<count; i++){
         leftLeaf = Math.floor(Math.random()*100);
         topLeaf = Math.floor(Math.random()*50);
         widthLeaf = Math.floor(Math.random()*50);
-        timeLeaf = Math.floor(Math.random()*7+5);
+        timeLeaf = Math.floor(Math.random()*5+5);
         blurLeaf = Math.floor(Math.random()*3);
         rotationLeaf = Math.floor(Math.random()*180);
         const div = document.createElement('div');
