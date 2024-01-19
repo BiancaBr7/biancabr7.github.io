@@ -144,7 +144,7 @@ tr:nth-child(even) {
         border-radius: 3px;
         background-color: rgba(0,0,0,0.7);
         width: 45%;
-        height: 50vh;
+        height: fit-content;
     }
 
     .navbar.show {

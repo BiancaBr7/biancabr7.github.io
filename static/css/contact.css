@@ -126,14 +126,14 @@ label {
 .inputs{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 900px;
 }
 
 input {
     margin-top: 10px;
     display: flex;
-    flex-direction: row;
-    width: 90%;
+    flex-direction: row ;
+    width: 430px;
     background-color:#dddddd;
     border-width: 0px;
     color: black;
@@ -151,7 +151,7 @@ input:focus{
 textarea{
     margin-top: 10px;
     color: black;
-    width: 100%;
+    width: 900px;
     max-width : 100%;
     min-width :100%;
     min-height: 200px;
@@ -217,7 +217,7 @@ button:hover{
         border-radius: 3px;
         background-color: rgba(0,0,0,0.7);
         width: 45%;
-        height: 50vh;
+        height: fit-content;
     }
 
     .navbar.show {
@@ -260,6 +260,14 @@ button:hover{
     .social-icons img {
         width: 30px;
         height:30px;
+    }
+    
+    .inputs{
+        width: 100%;
+    }
+    
+    input {
+        width: 90%;
     }
 
 }
