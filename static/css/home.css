@@ -7,6 +7,10 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.menu-toggle{
+    display:none;
+}
+
 body {
     min-height: 100vh;
     background-color:whitesmoke;
@@ -416,6 +420,7 @@ canvas {
     .menu-toggle{
         font-size: 20px;
         color: #fff;
+        display:block;
     }
     
     .messageContainer{

@@ -8,7 +8,12 @@
 body {
     min-height: 100vh;
     background-color:whitesmoke;
-  }
+}
+
+.menu-toggle{
+    font-size: 20px;
+    display:none;
+}
 
 .header{
     top:0;
@@ -154,6 +159,7 @@ tr:nth-child(even) {
 
     .menu-toggle{
         font-size: 20px;
+        display:block;
     }
 
 }

@@ -22,6 +22,10 @@ body {
     z-index: 100;
 }
 
+.menu-toggle{
+    font-size: 20px;
+    display:none;
+}
 
 .navbar a{
     position: relative;
@@ -228,6 +232,7 @@ button:hover{
 
     .menu-toggle{
         font-size: 20px;
+        display:block;
     }
 
     .icon_container {

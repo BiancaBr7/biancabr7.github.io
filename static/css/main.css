@@ -22,6 +22,10 @@ body {
     z-index: 100;
 }
 
+.menu-toggle{
+    font-size: 20px;
+    display:none;
+}
 
 .navbar a{
     position: relative;
@@ -192,6 +196,7 @@ ul{
 
     .menu-toggle{
         font-size: 20px;
+        display:block;
     }
 
 }
