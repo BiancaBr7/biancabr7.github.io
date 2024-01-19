@@ -6,7 +6,7 @@ function toggleNavbar() {
         open = false
     }
     else{
-        toggle.textContent = "✖"
+        toggle.textContent = "\u2715"
         open = true
     }
     var navList = document.querySelector('.navbar');
