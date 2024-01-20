@@ -18,7 +18,7 @@ function changeBackground(number){
     var screenWidth = window.innerWidth;
     const container = document.getElementById("container")
     var backgroundImages = ['spring','summer','autumn','winter','sqr','cat','firework','paw']
-    if (screenWidth < 768){
+    if (screenWidth < 890){
         var backgroundImages = ['spring','summer','autumn','winter','sqr_mobile','cat_mobile','firework','paw']
     }
     const buttoncolors = ['olive','cadetblue','#523928','steelblue','coral','orange','tomato','#1d1b23']
@@ -420,7 +420,7 @@ function displayMessage(){
         messageGraphic.style.top = "0";
         messageGraphic.style.backgroundSize = "cover";
         messageGraphic.style.position = "relative";
-        if (screenWidth >= 768){
+        if (screenWidth >= 890){
             messageContainer.style.bottom = "30%";
         }
         messageBox.style.paddingTop = "15px";

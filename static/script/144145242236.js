@@ -2,10 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const snowflakesContainer = document.querySelector(".snowflakes");
     const stopSnowButton = document.getElementById("stopSnowButton");
 
-    // Generate snowflakes
     generateSnowflakes(50);
 
-    // Attach event listener to the button
     stopSnowButton.addEventListener("click", toggleSnow);
 
     function generateSnowflakes(count) {

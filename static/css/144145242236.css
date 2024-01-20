@@ -15,7 +15,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    width: 100%; /* Set the width of your container */
+    width: 100%;
     min-height: 100vh;
     padding-top: 80px;
     padding-left: 50px;

@@ -191,7 +191,7 @@ button:hover{
     border-radius: 0px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 890px) {
 
     .title{
         width : 85%;
@@ -266,12 +266,12 @@ button:hover{
     }
 
     .inputs {
-        flex-direction: column; /* Display inputs in separate lines for mobile */
+        flex-direction: column;
     }
 
     .name-input,
     .email-input {
-        width: 100%; /* Full width for each input in mobile view */
+        width: 100%;
     }
 
 }

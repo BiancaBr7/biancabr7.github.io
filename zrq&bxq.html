@@ -12,15 +12,14 @@
     <body>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                // Define the correct password
-                const correctPassword = "145144242236"; // Replace with your actual password
 
-                // Prompt the user for the password
+                const correctPassword = "145144242236";
+
                 const enteredPassword = prompt("请输入密码:");
 
-                // Check if the entered password is correct
+
                 if (enteredPassword === correctPassword) {
-                    // Allow access to the content
+
                     document.body.innerHTML = `
                     <div class="snowflakes">
                         <div class = "snowflake"></div>
@@ -80,7 +79,7 @@
                     </div>
                     `;
                 } else {
-                    // Deny access and display a message
+
                     document.body.innerHTML = "<h1>Access Denied. Incorrect Password.</h1>";
                 }
             });

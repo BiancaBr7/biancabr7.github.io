@@ -1,5 +1,3 @@
-/* main.css */
-
 *{
     margin: 0;
     padding: 0;
@@ -58,7 +56,7 @@ body {
 
 .container {
     position: relative;
-    width: 100%; /* Set the width of your container */
+    width: 100%;
     height: 100vh;
     background-image: url('../images/backgrounds/winter.jpg');
     background-size: cover;
@@ -70,8 +68,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color:white; /* Set the text color */
-    font-size: 30px; /* Set the font size */
+    color:white;
+    font-size: 30px;
     text-align: center;
     z-index: 50;
 }
@@ -138,7 +136,7 @@ body {
 .overlay{
     background: rgba(0, 0, 0, 0.3);
     position: relative;
-    width: 100%; /* Set the width of your container */
+    width: 100%;
     height: 100vh;
     width:100%;
     height:100vh;
@@ -192,11 +190,11 @@ body {
 
 .bird {
     position: absolute;
-    width: 50px; /* Adjust the width of the bird */
-    height: 30px; /* Adjust the height of the bird */
+    width: 50px;
+    height: 30px;
     background-image: url('../images/seagull.png');
-    background-size: cover; /* Adjust the color of the bird */
-    animation: flyAnimation 8s linear infinite; /* Adjust the duration and other properties */
+    background-size: cover;
+    animation: flyAnimation 8s linear infinite;
 }
 
 @keyframes flyAnimation {
@@ -360,18 +358,17 @@ canvas {
 .messageGraphic {
     background-image: url('../images/MessageBox.png');
     width: 73px;
-    height: 100px; /* Adjust the height accordingly */
+    height: 100px;
     position: absolute;
     background-size:cover;
     top: -60px;
-    left: 30%; /* Adjust the left position to overlap with messageBox */
+    left: 30%;
     opacity: 1;
-    overflow: visible; /* Ensure content outside the container is visible */
-    /* Add any other necessary styles */
+    overflow: visible;
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 890px) {
 
     .music{
         display:none;
