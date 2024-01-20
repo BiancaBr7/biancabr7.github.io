@@ -5,6 +5,9 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+a{
+    cursor:pointer;
+}
 
 body {
     min-height: 100vh;
@@ -184,6 +187,10 @@ ul{
         height: fit-content;
     }
 
+    .navbar a::before{
+        background:#fff;
+    }
+
     .navbar.show {
         display: flex;
         position: fixed;
@@ -197,6 +204,7 @@ ul{
     .menu-toggle{
         font-size: 20px;
         display:block;
+        cursor:pointer;
     }
 
 }

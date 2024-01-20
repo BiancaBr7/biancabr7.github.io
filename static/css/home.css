@@ -104,7 +104,7 @@ body {
     transition: 0.5s;
     padding-left:5px;
 }
-  
+
 .more-button:hover span {
     padding-right: 30px;
 }
@@ -112,6 +112,12 @@ body {
 .more-button:hover span:after {
     opacity: 1;
     right: 0;
+}
+
+.buttons button{
+    cursor:pointer;
+    font-size:15px;
+    width:fit-content;
 }
 
 .site_footer p{
@@ -141,159 +147,6 @@ body {
     width:100%;
     height:100vh;
     overflow: hidden;
-}
-
-.snow{
-    position:absolute;
-    background-image: url('../images/snow.png');
-    background-size: cover;
-    animation: animationSnow 4s ease-in-out infinite;
-}
-
-@keyframes animationSnow{
-    0%{
-        transform: translate(0,0);
-        opacity: 0;
-    }
-    50%{
-        opacity : 1;
-    }
-    100%{
-        opacity :0;
-        transform: translate(0px,50vh);
-    }
-}
-
-.petal{
-    position:absolute;
-    background-image: url('../images/petal.png');
-    background-size: cover;
-    width:40%;
-    height:40%;
-    animation: animationPetal 4s linear infinite;
-}
-
-@keyframes animationPetal{
-    0%{
-        transform: translate(0,0);
-        opacity :0%;
-    }
-    50%{
-        opacity : 100%;
-    }
-    100%{
-        opacity :0;
-        transform: translate(100px,50vh);
-    }
-}
-
-
-.bird {
-    position: absolute;
-    width: 50px;
-    height: 30px;
-    background-image: url('../images/seagull.png');
-    background-size: cover;
-    animation: flyAnimation 8s linear infinite;
-}
-
-@keyframes flyAnimation {
-    0% {
-        transform: translate(0, 250px) rotate(45deg);
-    }
-    25% {
-        transform: translate(25vw, 200px) rotate(0deg);
-    }
-    60% {
-        transform: translate(60vw, 250px) rotate(45deg);
-    }
-    75% {
-        transform: translate(75vw, 300px) rotate(60deg);
-    }
-    100% {
-        transform: translate(100vw, 250px) rotate(45deg);
-    }
-}
-
-.leaf{
-    position:absolute;
-    background-image: url('../images/leaf.png');
-    background-size: cover;
-    animation: animationLeaf 4s ease-in-out infinite;
-}
-
-@keyframes animationLeaf{
-    0%{
-        top:0;
-        opacity: 0;
-    }
-    50%{
-        opacity : 1;
-    }
-    100%{
-        opacity :0;
-        top:80vh;
-    }
-}
-
-
-.snoring {
-    position: absolute;
-    font-size: 24px;
-    color:#fff;
-    font-weight: bold;
-    opacity: 0;
-    animation: snoringAnimation 1s forwards;
-}
-
-@keyframes snoringAnimation {
-    0% {
-        opacity: 1;
-        transform: translate(0,0) scale(0.5);
-    }
-    100% {
-        opacity: 0;
-        transform: translate(50px,-50px) scale(1.5);
-    }
-}
-
-.paw{
-    position:absolute;
-    background-image: url('../images/paw.png');
-    background-size: cover;
-    width:128px;
-    height:110px;
-    animation: pawAnimation 2s forwards;
-}
-
-@keyframes pawAnimation {
-    0% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.nut{
-    position: absolute;
-    font-size: 24px;
-    opacity: 0;
-    animation: nutAnimation 2s forwards;
-}
-
-@keyframes nutAnimation {
-    0% {
-        opacity: 1;
-        transform: translate(0,0);
-    }
-    100% {
-        opacity: 0;
-        transform: translate(0,100px);
-    }
 }
 
 .effect{
@@ -418,6 +271,7 @@ canvas {
         font-size: 20px;
         color: #fff;
         display:block;
+        cursor:pointer;
     }
     
     .messageContainer{
