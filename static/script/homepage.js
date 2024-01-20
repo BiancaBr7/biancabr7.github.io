@@ -15,8 +15,12 @@ function changeBackground(number){
     const clickPanel = document.getElementById('click');
     clearEffects(clickPanel)
     clickPanel.hidden = true;
+    var screenWidth = window.innerWidth;
     const container = document.getElementById("container")
-    const backgroundImages = ['spring','summer','autumn','winter','sqr','cat','firework','paw']
+    var backgroundImages = ['spring','summer','autumn','winter','sqr','cat','firework','paw']
+    if (screenWidth < 768){
+        var backgroundImages = ['spring','summer','autumn','winter','sqr_mobile','cat_mobile','firework','paw']
+    }
     const buttoncolors = ['olive','cadetblue','#523928','steelblue','coral','orange','tomato','#1d1b23']
     const imageId = `url('static/images/backgrounds/${backgroundImages[number]}.jpg')`;
     const buttonContainer = document.getElementById('more-button')
