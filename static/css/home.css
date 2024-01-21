@@ -116,7 +116,7 @@ body {
 
 .buttons button{
     cursor:pointer;
-    font-size:15px;
+    font-size: 15px;
     width:fit-content;
 }
 
@@ -276,5 +276,9 @@ canvas {
     
     .messageContainer{
         position:absolute;
+    }
+
+    .buttons button{
+        font-size: min(2.5vw, 15px);
     }
 }
