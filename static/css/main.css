@@ -12,17 +12,35 @@ a{
 body {
     min-height: 100vh;
     background-color:whitesmoke;
-  }
+}
+
+body.disabled{
+    position: fixed;
+    height:100%;
+    width:100%;
+    z-index:-100;
+    overflow-y: scroll;
+    top:0;
+    .page{
+        pointer-events: none;
+        user-select: none;
+        touch-action: none;
+    }
+}
+
+.page {
+    z-index: 0;
+}
 
 .header{
     top:0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 30px 7% 25px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index:100;
 }
 
 .menu-toggle{
@@ -167,11 +185,10 @@ ul{
         top:0;
         left: 0;
         width: 100%;
-        padding: 10% 10%;
+        padding: 30px 10%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        z-index: 100;
     }
     
     
@@ -182,7 +199,7 @@ ul{
         top: 120px;
         right:8%;
         border-radius: 3px;
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0,0,0,0.9);
         width: 45%;
         height: fit-content;
     }

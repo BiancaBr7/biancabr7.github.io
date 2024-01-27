@@ -16,10 +16,10 @@ function changeBackground(number){
     clearEffects(clickPanel)
     clickPanel.hidden = true;
     var screenWidth = window.innerWidth;
-    const container = document.getElementById("container")
-    var backgroundImages = ['spring','summer','autumn','winter','sqr','cat','firework','paw']
+    const container = document.getElementById("background")
+    var backgroundImages = ['spring','summer','autumn','winter','sqr','cat','none','paw']
     if (screenWidth < 890){
-        var backgroundImages = ['spring','summer','autumn','winter','sqr_mobile','cat_mobile','firework','paw']
+        var backgroundImages = ['spring','summer','autumn','winter','sqr_mobile','cat_mobile','none','paw']
     }
     const buttoncolors = ['olive','cadetblue','#523928','steelblue','coral','orange','tomato','#1d1b23']
     const imageId = `url('static/images/backgrounds/${backgroundImages[number]}.jpg')`;
