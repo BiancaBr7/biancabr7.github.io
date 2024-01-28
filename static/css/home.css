@@ -312,7 +312,7 @@ canvas {
         font-size: min(5vw, 15px);
         width:5vw;
         height:5vw;
-        margin:0;
-        padding:2px;
+        margin:0 0;
+        padding:2px 2px;
     }
 }
