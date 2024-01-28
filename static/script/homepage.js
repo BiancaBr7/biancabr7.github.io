@@ -85,10 +85,10 @@ function changeBackground(number){
         paw();
     }
     else if (number == 8){
+        closeMessageBox();
         if (screenWidth < 890){
             return;
         }
-        closeMessageBox();
         dragon();
     }
 }
