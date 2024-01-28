@@ -1,33 +1,56 @@
 snow()
 var animationFrame;
-var isAnimationOn = false;
+var isFireAnimationOn = false;
 canvas = document.getElementById("canvas");
 canvas.hidden = true;
+var isDragonAnimationOn = false;
 var messageBoxClosed = false;
+default_button = document.getElementById('winter')
+default_button.style.transform = "scale(1.5)";
+default_button.style.marginLeft = "4px";
+default_button.style.marginRight = "4px";
 
 function changeBackground(number){
-    if (number != 6 && isAnimationOn) {
+    if (number != 6 && isFireAnimationOn) {
         stopFireworks();
     }
+    isDragonAnimationOn = false;
     const back = document.getElementById("effect");
     clearEffects(back);
     back.hidden = true;
     const clickPanel = document.getElementById('click');
-    clearEffects(clickPanel)
+    clearEffects(clickPanel);
     clickPanel.hidden = true;
     var screenWidth = window.innerWidth;
-    const container = document.getElementById("background")
-    var backgroundImages = ['spring','summer','autumn','winter','sqr','cat','none','paw']
+    const container = document.getElementById("background");
+    var backgroundImages = ['spring','summer','autumn','winter','sqr','cat','none','paw','dragon'];
     if (screenWidth < 890){
-        var backgroundImages = ['spring','summer','autumn','winter','sqr_mobile','cat_mobile','none','paw']
+        var backgroundImages = ['spring','summer','autumn','winter','sqr_mobile','cat_mobile','none','paw','dragon_mobile'];
     }
-    const buttoncolors = ['olive','cadetblue','#523928','steelblue','coral','orange','tomato','#1d1b23']
+    const buttoncolors = ['olive','cadetblue','#523928','steelblue','coral','orange','tomato','#1d1b23','red'];
+    const buttonnames = ['spring', 'summer', 'autumn', 'winter', 'sqr', 'cat', 'firework', 'paw', 'dragon'];
     const imageId = `url('static/images/backgrounds/${backgroundImages[number]}.jpg')`;
-    const buttonContainer = document.getElementById('more-button')
-
+    const buttonContainer = document.getElementById('more-button');
     buttonContainer.style.backgroundColor = buttoncolors[number];
 
-    container.style.backgroundImage = imageId;
+    for (let i = 0; i < buttonnames.length; i++){
+        a = document.getElementById(buttonnames[i])
+        if (i == number){
+            console.log(i)
+            a.style.transform = "scale(1.5)";
+            a.style.marginLeft = "4px";
+            a.style.marginRight = "4px";
+        }
+        else{
+            a.style.transform = "scale(1)";
+            a.style.marginLeft = "1px";
+            a.style.marginRight = "1px";
+        }
+    }
+    
+    if (number != 6){
+        container.style.backgroundImage = imageId;
+    }
 
     if (number == 0){
         closeMessageBox();
@@ -61,9 +84,17 @@ function changeBackground(number){
         displayMessage();
         paw();
     }
+    else if (number == 8){
+        if (screenWidth < 890){
+            return;
+        }
+        closeMessageBox();
+        dragon();
+    }
 }
 
 function clearEffects(container) {
+    console.log(container);
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
@@ -189,8 +220,8 @@ function paw() {
         div.classList.add('paw');
         clonedBack.appendChild(div);
 
-        div.style.left = x + 'px';
-        div.style.top = y + 'px';
+        div.style.left = x-64 + 'px';
+        div.style.top = y-55 + 'px';
     }
 }
 
@@ -226,13 +257,13 @@ function nut() {
 
 function startFireworks() {
     console.log("runned");
-    isAnimationOn = true;
+    isFireAnimationOn = true;
     canvas = document.getElementById("canvas");
     canvas.hidden = false;
 }
 
 function stopFireworks() {
-    isAnimationOn = false;
+    isFireAnimationOn = false;
     canvas = document.getElementById("canvas");
     canvas.hidden = true;
     cancelAnimationFrame(animationFrame);
@@ -248,7 +279,7 @@ var canvas, ctx, w, h, particles = [], probability = 0.04,
     xPoint, yPoint;
 
 function onLoad() {
-    if (!isAnimationOn){
+    if (!isFireAnimationOn){
         startFireworks();
     }
     canvas = document.getElementById("canvas");
@@ -266,7 +297,7 @@ function resizeCanvas() {
 }
 
 function updateWorld() {
-    if (isAnimationOn) {
+    if (isFireAnimationOn) {
         update();
         paint();
         animationFrame = window.requestAnimationFrame(updateWorld);
@@ -428,4 +459,72 @@ function displayMessage(){
         messageContainer.style.pointerEvents = "none";
     }
     
+}
+
+function dragon(){
+    isDragonAnimationOn = true;
+    const back = document.getElementById("click");
+    back.hidden = false;
+    const clonedBack = back.cloneNode(true);
+    back.parentNode.replaceChild(clonedBack, back);
+    const maxTailLength = 5;
+    const spaceBetweenDots = 40;
+    const bodySegments = [];
+    const headPosition = { x: 0, y: 0 };
+
+    for (let i = 0; i < maxTailLength; i++) {
+      const bodySegment = document.createElement("div");
+      bodySegment.className = "dragon-body";
+      clonedBack.appendChild(bodySegment);
+      bodySegments.push({ x: 0, y: 0 });
+    }
+
+    const head = document.createElement("div");
+    head.className = "dragon-head";
+    clonedBack.appendChild(head);
+
+    function updateDragon() {
+        if (isDragonAnimationOn){
+            const bodySegmentsElements = document.querySelectorAll(".dragon-body");
+
+            for (let i = 0; i < maxTailLength; i++) {
+                if (i == 0){
+                    bodySegmentsElements[i].style.visibility="hidden";
+                }
+                const position = bodySegments[i];
+                const bodySegment = bodySegmentsElements[i];
+
+                bodySegment.style.left = position.x+ "px";
+                bodySegment.style.top = position.y+ "px";
+            }
+
+            head.style.left = headPosition.x-50 + "px";
+            head.style.top = headPosition.y-50 + "px";
+
+            requestAnimationFrame(updateDragon);
+        }
+    }
+
+    clonedBack.addEventListener("mousemove", function (e) {
+        headPosition.x = e.clientX;
+        headPosition.y = e.clientY;
+
+        for (let i = maxTailLength - 1; i > 0; i--) {
+            const prevPosition = bodySegments[i - 1];
+            const currentPosition = bodySegments[i];
+            const distance = Math.sqrt((prevPosition.x - currentPosition.x) ** 2 + (prevPosition.y - currentPosition.y) ** 2);
+
+            if (distance > spaceBetweenDots) {
+            const ratio = spaceBetweenDots / distance;
+            bodySegments[i].x = prevPosition.x + (currentPosition.x - prevPosition.x) * ratio;
+            bodySegments[i].y = prevPosition.y + (currentPosition.y - prevPosition.y) * ratio;
+            }
+        }
+
+        bodySegments[0] = { x: headPosition.x, y: headPosition.y };
+
+        if (isDragonAnimationOn){
+            updateDragon();
+        }
+    });
 }

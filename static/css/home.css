@@ -160,6 +160,16 @@ body.disabled{
     z-index: 100;
 }
 
+.buttons button{
+    border:0px;
+    border-radius: 1px;
+    outline:none;
+    width:fit-content;
+    margin-left: 1px;
+    margin-right: 1px;
+    transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+}
+
 .overlay{
     background: rgba(0, 0, 0, 0.3);
     position: relative;

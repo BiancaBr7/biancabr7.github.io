@@ -150,3 +150,21 @@
         transform: translate(0,100px);
     }
 }
+
+.dragon-body {
+    position: absolute;
+    width: 73px;
+    height: 50px;
+    background-size: cover;
+    background-image: url('../images/d-tail.png');
+    pointer-events: none;
+}
+
+.dragon-head {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-image: url('../images/d-head.png');
+    pointer-events: none;
+}
