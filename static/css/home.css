@@ -310,7 +310,8 @@ canvas {
 
     .buttons button{
         font-size: min(5vw, 15px);
-        width:fit-content;
+        width:5vw;
+        height:5vw;
         margin:0;
         padding:2px;
     }
