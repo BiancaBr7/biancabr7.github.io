@@ -315,5 +315,6 @@ canvas {
         margin:0 0;
         line-height: 0;
         vertical-align: middle;
+        padding: 2px, 2px;
     }
 }
