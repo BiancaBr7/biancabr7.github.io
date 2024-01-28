@@ -135,11 +135,6 @@ body.disabled{
     right: 0;
 }
 
-.buttons button{
-    cursor:pointer;
-    font-size: 15px;
-    width:fit-content;
-}
 
 .site_footer p{
     text-align: center;
@@ -161,6 +156,8 @@ body.disabled{
 }
 
 .buttons button{
+    cursor:pointer;
+    font-size: 15px;
     border:0px;
     border-radius: 1px;
     outline:none;
@@ -312,6 +309,9 @@ canvas {
     }
 
     .buttons button{
-        font-size: min(2.5vw, 15px);
+        font-size: min(5vw, 15px);
+        width:fit-content;
+        margin:0;
+        padding:2px;
     }
 }
