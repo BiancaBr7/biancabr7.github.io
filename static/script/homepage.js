@@ -25,10 +25,10 @@ function changeBackground(number){
     const container = document.getElementById("background");
     var backgroundImages = ['spring','summer','autumn','winter','sqr','cat','none','paw','dragon'];
     if (screenWidth < 890){
-        var backgroundImages = ['spring','summer','autumn','winter','sqr_mobile','cat_mobile','none','paw','dragon_mobile'];
+        var backgroundImages = ['spring','summer','autumn','winter','sqr_mobile','cat_mobile','none','paw'];
     }
-    const buttoncolors = ['olive','cadetblue','#523928','steelblue','coral','orange','tomato','#1d1b23','red'];
-    const buttonnames = ['spring', 'summer', 'autumn', 'winter', 'sqr', 'cat', 'firework', 'paw', 'dragon'];
+    const buttoncolors = ['olive','cadetblue','#523928','steelblue','coral','orange','tomato','#1d1b23'];
+    const buttonnames = ['spring', 'summer', 'autumn', 'winter', 'sqr', 'cat', 'firework', 'paw'];
     const imageId = `url('static/images/backgrounds/${backgroundImages[number]}.jpg')`;
     const buttonContainer = document.getElementById('more-button');
     buttonContainer.style.backgroundColor = buttoncolors[number];
@@ -83,13 +83,6 @@ function changeBackground(number){
     else if (number == 7){
         displayMessage();
         paw();
-    }
-    else if (number == 8){
-        closeMessageBox();
-        if (screenWidth < 890){
-            return;
-        }
-        dragon();
     }
 }
 
@@ -459,72 +452,4 @@ function displayMessage(){
         messageContainer.style.pointerEvents = "none";
     }
     
-}
-
-function dragon(){
-    isDragonAnimationOn = true;
-    const back = document.getElementById("click");
-    back.hidden = false;
-    const clonedBack = back.cloneNode(true);
-    back.parentNode.replaceChild(clonedBack, back);
-    const maxTailLength = 5;
-    const spaceBetweenDots = 40;
-    const bodySegments = [];
-    const headPosition = { x: 0, y: 0 };
-
-    for (let i = 0; i < maxTailLength; i++) {
-      const bodySegment = document.createElement("div");
-      bodySegment.className = "dragon-body";
-      clonedBack.appendChild(bodySegment);
-      bodySegments.push({ x: 0, y: 0 });
-    }
-
-    const head = document.createElement("div");
-    head.className = "dragon-head";
-    clonedBack.appendChild(head);
-
-    function updateDragon() {
-        if (isDragonAnimationOn){
-            const bodySegmentsElements = document.querySelectorAll(".dragon-body");
-
-            for (let i = 0; i < maxTailLength; i++) {
-                if (i == 0){
-                    bodySegmentsElements[i].style.visibility="hidden";
-                }
-                const position = bodySegments[i];
-                const bodySegment = bodySegmentsElements[i];
-
-                bodySegment.style.left = position.x+ "px";
-                bodySegment.style.top = position.y+ "px";
-            }
-
-            head.style.left = headPosition.x-50 + "px";
-            head.style.top = headPosition.y-50 + "px";
-
-            requestAnimationFrame(updateDragon);
-        }
-    }
-
-    clonedBack.addEventListener("mousemove", function (e) {
-        headPosition.x = e.clientX;
-        headPosition.y = e.clientY;
-
-        for (let i = maxTailLength - 1; i > 0; i--) {
-            const prevPosition = bodySegments[i - 1];
-            const currentPosition = bodySegments[i];
-            const distance = Math.sqrt((prevPosition.x - currentPosition.x) ** 2 + (prevPosition.y - currentPosition.y) ** 2);
-
-            if (distance > spaceBetweenDots) {
-            const ratio = spaceBetweenDots / distance;
-            bodySegments[i].x = prevPosition.x + (currentPosition.x - prevPosition.x) * ratio;
-            bodySegments[i].y = prevPosition.y + (currentPosition.y - prevPosition.y) * ratio;
-            }
-        }
-
-        bodySegments[0] = { x: headPosition.x, y: headPosition.y };
-
-        if (isDragonAnimationOn){
-            updateDragon();
-        }
-    });
 }
