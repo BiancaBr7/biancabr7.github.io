@@ -284,6 +284,7 @@ canvas {
         width: 45%;
         height: fit-content;
         z-index: 500;
+        transition: 0.5s ease-in-out;
     }
 
     .navbar.show {
