@@ -1,11 +1,11 @@
-snow()
+petal()
 var animationFrame;
 var isFireAnimationOn = false;
 canvas = document.getElementById("canvas");
 canvas.hidden = true;
 var isDragonAnimationOn = false;
 var messageBoxClosed = false;
-default_button = document.getElementById('winter')
+default_button = document.getElementById('spring')
 default_button.style.transform = "scale(1.5)";
 default_button.style.marginLeft = "4px";
 default_button.style.marginRight = "4px";
