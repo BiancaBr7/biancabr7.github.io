@@ -99,17 +99,24 @@ table {
     margin-bottom: 20px;
   }
   
-td, th {
+td{
     border: 1px solid #dddddd;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
     font-weight: normal;
     text-align: left;
     padding: 8px;
+    width:10%;
 }
 
-tr:first-child th{
+tr th{
+    border: 1px solid #dddddd;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
     font-weight: bold;
+    text-align: left;
+    padding: 8px;
+    width:fit-content;
 }
 
 tr:nth-child(even) {
