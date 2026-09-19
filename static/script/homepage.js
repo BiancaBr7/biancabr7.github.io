@@ -1,14 +1,18 @@
-petal()
 var animationFrame;
 var isFireAnimationOn = false;
 canvas = document.getElementById("canvas");
 canvas.hidden = true;
 var isDragonAnimationOn = false;
 var messageBoxClosed = false;
-default_button = document.getElementById('spring')
-default_button.style.transform = "scale(1.5)";
-default_button.style.marginLeft = "4px";
-default_button.style.marginRight = "4px";
+
+function getCurrentSeason() {
+    // Meteorological seasons (Northern Hemisphere)
+    var month = new Date().getMonth(); // 0 = January
+    if (month >= 2 && month <= 4) return 0; // Spring: Mar–May
+    if (month >= 5 && month <= 7) return 1; // Summer: Jun–Aug
+    if (month >= 8 && month <= 10) return 2; // Autumn: Sep–Nov
+    return 3; // Winter: Dec–Feb
+}
 
 function changeBackground(number){
     if (number != 6 && isFireAnimationOn) {
@@ -453,3 +457,6 @@ function displayMessage(){
     }
     
 }
+
+// Apply seasonal theme after consts above are initialized
+changeBackground(getCurrentSeason());

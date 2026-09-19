@@ -46,6 +46,31 @@
                 <h1>Projects</h1>
             </div>
             <div class = "box">
+                <h2>Embedded Voice Assistant</h2>
+                <h3>Mar 2025 – May 2025</h3>
+                <iframe width="75%" height = "450px" src="https://www.youtube.com/embed/n40HbZ-5FD8"></iframe>
+                <ul>
+                    <li>Engineered a standalone edge voice assistant on an ESP32 in C++, implementing non-blocking event loops and finite-state machines to manage concurrent audio processing, Wi-Fi telemetry, and peripheral control.</li>
+                    <li>Configured low-latency I2S digital audio pipelines with Direct Memory Access buffers, fine-tuning sample rates and ring-buffer thresholds to capture and playback synchronized high-fidelity audio.</li>
+                    <li>Built a local Python/FastAPI inference backend hosting a quantized open-source LLM, orchestrating an end-to-end pipeline spanning speech-to-text, context generation, and text-to-speech synthesis.</li>
+                    <li>Implemented bi-directional WebSocket streaming between the ESP32 and host server, serializing chunked raw audio frames with automated reconnection logic to achieve sub-second end-to-end voice latency.</li>
+                </ul>
+            </div>
+            <div class = "box">
+                <h2>Moodii</h2>
+                <h3>Apr 2024 – Aug 2024</h3>
+                <iframe width="75%" height = "450px" src="https://www.youtube.com/embed/ERzkv3qhfCc"></iframe>
+                <ul>
+                    <li>Developed an AI-powered Android app in Kotlin with Jetpack Compose, enabling users to log moods and track emotion trends via voice recordings.</li>
+                    <li>Designed and implemented a Spring Boot backend with 15+ RESTful APIs, enabling secure user authentication, efficient data storage, and advanced emotion trend analytics.</li>
+                    <li>Integrated a CNN+LSTM Speech Emotion Recognition model through Flask, achieving 81% accuracy.</li>
+                    <li>Orchestrated the containerization of backend and ML services using Docker, deploying to Azure with automated CI/CD pipelines to ensure rapid, reliable deployments and horizontal scalability.</li>
+                </ul>
+                <p>Take a look at the source code on 
+                    <a href="https://github.com/BiancaBr7/Moodii"  target="_blank">Github</a>
+                </p>
+            </div>
+            <div class = "box">
                 <h2>DoorSense</h2>
                 <iframe width="75%" height = "450px" src="https://www.youtube.com/embed/aOHLPfLZuMQ"></iframe>
                 <p>DoorSense a smart home security system using Raspberry Pi 4B, ESP32 camera, magnetic door
